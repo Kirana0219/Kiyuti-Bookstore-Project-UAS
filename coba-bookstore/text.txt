@@ -6,6 +6,7 @@ JENIS BUKU
 - Horor
 - Komedi
 - Pengembangan Diri
+- Komik
 
 DESKRIPSI BUKU
 **Romantis
@@ -38,6 +39,13 @@ Deskripsi:
 
 **Pengembangan Diri
 1. 
+Deskripsi:
+
+2.
+Deskripsi:
+
+**Komik
+1.
 Deskripsi:
 
 2.
