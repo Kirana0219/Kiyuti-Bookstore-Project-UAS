@@ -103,15 +103,16 @@
          </section>
 
          <!--==================== GENRE ====================-->
-         <select id="categoryFilter" class="category-filter">
+         <section id="books">
+
+         <!-- DROPDOWN -->
+         <select id="categoryFilter" onchange="filterBooks(this.value)">
             <option value="all">Semua Kategori</option>
             <option value="romantis">Romantis</option>
             <option value="fantasi">Fantasi</option>
             <option value="horor">Horor</option>
             <option value="komedi">Komedi</option>
-            <option value="pengembangan">Pengembangan Diri</option>
-            <option value="komik">Komik</option>
-            </select>
+         </select>
 
             <section class="new section" id="new">
                <h2 class="section-title">Daftar Buku</h2>
@@ -910,6 +911,7 @@
                </div>
 
             </section>
+         </section>
 
 
          <!--==================== BUKU TERBARU ====================-->
