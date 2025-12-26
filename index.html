@@ -3,11 +3,10 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>KIYUTI Bookstore</title>
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
-
-      <title>Bookstore Kiyuti</title>
    </head>
    <body>
       <!--==================== HEADER ====================-->
@@ -31,12 +30,11 @@
                   </h1>
 
                   <p class="home-description">
-                     Temukan berbagai buku pilihan dari fiksi, nonfiksi, hingga buku pengembangan diri. 
-                     <br> Koleksi terbaru kami dan temukan bacaan yang menemani setiap perjalanan 
-                     inspirasimu.
+                     Temukan berbagai buku pilihan dari fiksi, nonfiksi, hingga buku pengembangan diri.
+                     <br>Koleksi terbaru kami dan temukan bacaan yang menemani setiap perjalanan inspirasimu.
                   </p>
 
-                  <a href="Jelajahi Sekarang🚀" class="button"></a>
+                  <!-- <a href="Genre" class="home-container">Jelajahi Sekarang🚀</a> -->
 
                   <div class="home-image">
                      <div class="home-swiper swiper"></div>
@@ -47,23 +45,66 @@
          </section>
 
          <!--==================== GENRE ====================-->
-         <section class="genre section" id="genre">
-            
-         </section>
+         <select id="categoryFilter" class="category-filter">
+            <option value="all">Semua Kategori</option>
+            <option value="romantis">Romantis</option>
+            <option value="fantasi">Fantasi</option>
+            <option value="horor">Horor</option>
+            <option value="komedi">Komedi</option>
+            <option value="pengembangan">Pengembangan Diri</option>
+            <option value="komik">Komik</option>
+            </select>
+
+            <section class="new section" id="new">
+               <h2 class="section-title">Daftar Buku</h2>
+
+               <div class="book-container grid">
+                  <div class="book-card" data-category="romantis">
+                     <h3>Twilight</h3>
+                     <p>Stephenie Meyer</p>
+                  </div>
+
+                  <div class="book-card" data-category="romantis">
+                     <h3>Septihan</h3>
+                     <p>Poppi Pertiwi</p>
+                  </div>
+
+                  <div class="book-card" data-category="fantasi">
+                     <h3>Harry Potter</h3>
+                     <p>J.K. Rowling</p>
+                  </div>
+
+                  <div class="book-card" data-category="horor">
+                     <h3>Danur</h3>
+                     <p>Risa Saraswati</p>
+                  </div>
+
+                  <div class="book-card" data-category="komedi">
+                     <h3>Koala Kumal</h3>
+                     <p>Raditya Dika</p>
+                  </div>
+
+                  <div class="book-card" data-category="komik">
+                     <h3>Naruto</h3>
+                     <p>Masashi Kishimoto</p>
+                  </div>
+               </div>
+            </section>
+
 
          <!--==================== NEW ARRIVAL ====================-->
-         <section class="new section" id="new">
+         <section class="new-arrival-section" id="new">
             
          </section>
          
          <!--==================== TESTIMONIAL ====================-->
          <section class="testimonial section" id="testimonial">
-         
+            
          </section>
 
          <!--==================== CONTACT AND BUY ====================-->
          <section class="buy section" id="buy">
-            
+         
          </section>
       </main>
 
