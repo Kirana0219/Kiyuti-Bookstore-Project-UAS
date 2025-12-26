@@ -23,10 +23,6 @@ Sinopsis:
 4. Pergi - Tere Liye
 Sinopsis: 
 
-<<<<<<< HEAD
-=======
-4.
->>>>>>> deb806a18ee844534db56e4ced4cb70d012fbee6
 **Fantasi
 1.
 Deskripsi:
