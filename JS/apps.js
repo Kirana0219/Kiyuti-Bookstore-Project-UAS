@@ -120,6 +120,7 @@ function updateTitle(category) {
 
 });
 
+
 /*=============== SLIDER BOOKS ===============*/
 document.querySelectorAll(".book-container").forEach(container => {
   const slider = container.previousElementSibling;
