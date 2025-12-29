@@ -564,6 +564,21 @@ body.dark-theme {
 
 .testimonial-content{
   display: flex;
+  animation: scroll 20s linear infinite; 
+}
+
+/* infinite Scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-content:hover{
+  animation-play-state: paused; 
 }
 
 /*=============== CONTACT AND BUY===============*/
