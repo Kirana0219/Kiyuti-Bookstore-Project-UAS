@@ -146,7 +146,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   const btnRight = wrapper.querySelector(".slide-right");
 
   btnRight.addEventListener("click", () => {
-    // jika sudah sampai akhir (dengan toleransi 1px)
     if(container.scrollLeft + container.clientWidth >= container.scrollWidth - 1){
       container.scrollTo({ left: 0, behavior: "smooth" });
     } else {
@@ -155,7 +154,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   });
 
   btnLeft.addEventListener("click", () => {
-    // jika sudah sampai awal (dengan toleransi 1px)
     if(container.scrollLeft <= 0){
       container.scrollTo({ left: container.scrollWidth, behavior: "smooth" });
     } else {
