@@ -120,3 +120,22 @@ function updateTitle(category) {
 
 });
 
+/*=============== HOME SWIPER ===============*/
+let swiperHome = new Swiper('.home-swiper', {
+  loop: true,
+  spaceBetween: -24,
+  grabCursor: true,
+  slidesPerView: 'auto',
+  centeredSlides: 'auto',
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    1220: {
+      spaceBetween: -32,
+    }
+  }
+})
