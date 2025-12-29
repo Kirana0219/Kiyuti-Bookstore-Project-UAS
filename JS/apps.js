@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ================= FILTER KATEGORI ================= */
 const categoryFilter = document.getElementById("categoryFilter");
-const bookCards = document.querySelectorAll(".book-card");
+const bookCards = document.querySelectorAll("#new .book-card");
 const title = document.getElementById("bookTitle");
 
 categoryFilter.addEventListener("click", (e) => {
@@ -119,6 +119,84 @@ function updateTitle(category) {
   });
 
 });
+
+/*=============== SLIDER BOOKS ===============*/
+document.querySelectorAll(".book-container").forEach(container => {
+  const slider = container.previousElementSibling;
+  if (!slider || !slider.classList.contains("slider-control")) return;
+
+  const left = slider.querySelector(".slide-left");
+  const right = slider.querySelector(".slide-right");
+
+  const scrollAmount = 300;
+
+  right.addEventListener("click", () => {
+    container.scrollLeft += scrollAmount;
+  });
+
+  left.addEventListener("click", () => {
+    container.scrollLeft -= scrollAmount;
+  });
+});
+
+/*=============== SLIDER BOOKS ===============*/
+document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
+  const container = wrapper.querySelector(".book-container");
+  const btnLeft = wrapper.querySelector(".slide-left");
+  const btnRight = wrapper.querySelector(".slide-right");
+
+  if (!container || !btnLeft || !btnRight) return;
+
+  const scrollAmount = 300;
+
+  btnRight.addEventListener("click", () => {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  btnLeft.addEventListener("click", () => {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+});
+
+
+/*=============== SLIDER BOOKS ===============*/
+document.querySelectorAll(".book-container").forEach(container => {
+  const slider = container.previousElementSibling;
+  if (!slider || !slider.classList.contains("slider-control")) return;
+
+  const left = slider.querySelector(".slide-left");
+  const right = slider.querySelector(".slide-right");
+
+  const scrollAmount = 300;
+
+  right.addEventListener("click", () => {
+    container.scrollLeft += scrollAmount;
+  });
+
+  left.addEventListener("click", () => {
+    container.scrollLeft -= scrollAmount;
+  });
+});
+
+/*=============== SLIDER BOOKS ===============*/
+document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
+  const container = wrapper.querySelector(".book-container");
+  const btnLeft = wrapper.querySelector(".slide-left");
+  const btnRight = wrapper.querySelector(".slide-right");
+
+  if (!container || !btnLeft || !btnRight) return;
+
+  const scrollAmount = 300;
+
+  btnRight.addEventListener("click", () => {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  btnLeft.addEventListener("click", () => {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+});
+
 
 /*=============== HOME SWIPER ===============*/
 let swiperHome = new Swiper('.home-swiper', {

@@ -528,8 +528,10 @@ img {
   font-size: var(--h3-font-size);
   margin-bottom: 0.2rem;
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
   font-family: var(--body-font);
+  font-weight: bold;
+  line-height: 1.4;
+  max-width: 16ch;
 }
 
 /* Penulis */
@@ -620,19 +622,105 @@ img {
 }
 
 /*=============== NEW ARRIVAL ===============*/
+.container-new-arrival{
+  
+  margin: 0 96px;
+}
+
+
+/* ===== PANAH SLIDER ===== */
+.slider-control {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.slider-control button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: var(--container-color);
+  color: var(--first-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.slider-control button:hover {
+  transform: scale(1.1);
+}
+
+/* ===== SLIDER WRAPPER ===== */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== SLIDER BUKU ===== */
+.book-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.book-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== UKURAN CARD ===== */
+.book-card {
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+/* ===== PANAH ===== */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: var(--container-color);
+  color: var(--first-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  z-index: 10;
+}
+
+.slide-left {
+  left: -20px;
+}
+
+.slide-right {
+  right: -20px;
+}
+
+.slide-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+} */
+
 
 
 /*=============== RECOMMENDATION ===============*/
-
+.container-recomendation{
+  margin: 0 96px;
+}
 /* Swiper class */
 
 
 /*=============== TESTIMONIAL ===============*/
 .testimonial-section{
-  margin: 0 96px;
   position: relative;
   /* height: 100vh; */
-  padding-block: 5rem;
+  padding-block: 5rem 0px;
   display: grid;
   align-items: center;
   row-gap: 1rem;
