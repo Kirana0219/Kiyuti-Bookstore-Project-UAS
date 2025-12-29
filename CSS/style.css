@@ -106,16 +106,41 @@ body.dark-theme {
   --title-color: #F4EEFF;
   --text-color: #E8E8E8;
   --border-color: #818181;
-  --white-color: #3B3B3B;
   --body-color: #1E1E1E;
-  --container-color: #3B3B3B;
+  --container-color: #282828;
 }
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme .shadow-header {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .6);
+}
 
+.dark-theme .nav-menu {
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, .4);
+}
+
+.dark-theme .scrollup {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+}
+
+.dark-theme .search-wrapper.active {
+  background-color: #282828;
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: #3B3B3B;
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: #5A5A5A;
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: #818181;
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -542,3 +567,46 @@ body.dark-theme {
 
 
 /* For large devices */
+@media screen and (min-width: 1150px) {
+  .section {
+    padding-block: 7rem 2rem;
+  }
+
+  .nav {
+    height: var(--header-height);
+    column-gap: 4rem;
+  }
+
+  .nav-link i {
+    display: none;
+  }
+
+  .nav-link span {
+    display: block;
+  }
+
+  .nav-menu {
+    width: initial;
+    margin-inline: auto 0;
+  }
+
+  .nav-list {
+    column-gap: 4rem;
+  }
+
+  .nav-link {
+    font-weight: var(--font-medium);
+  }
+
+  .dark-theme .nav-menu {
+    box-shadow: none;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin-inline: auto;
+  }
+  
+}
