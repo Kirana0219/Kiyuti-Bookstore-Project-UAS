@@ -565,7 +565,7 @@ img {
 
 /*=============== MODAL BOOK DETAIL ===============*/
 .modal {
-  display: none; /* modal BENAR-BENAR mati saat awal */
+  display: none; 
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);

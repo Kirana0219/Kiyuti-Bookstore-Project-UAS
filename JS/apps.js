@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ================= FILTER KATEGORI ================= */
 const categoryFilter = document.getElementById("categoryFilter");
-const bookCards = document.querySelectorAll("#new.book-card");
+const bookCards = document.querySelectorAll("#new .book-card");
 const title = document.getElementById("bookTitle");
 
 categoryFilter.addEventListener("click", (e) => {
@@ -120,7 +120,6 @@ function updateTitle(category) {
 
 });
 
-
 /*=============== SLIDER BOOKS ===============*/
 document.querySelectorAll(".book-container").forEach(container => {
   const slider = container.previousElementSibling;
@@ -146,18 +145,23 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   const btnLeft = wrapper.querySelector(".slide-left");
   const btnRight = wrapper.querySelector(".slide-right");
 
-  if (!container || !btnLeft || !btnRight) return;
-
-  const scrollAmount = 300;
-
   btnRight.addEventListener("click", () => {
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    if(container.scrollLeft + container.clientWidth >= container.scrollWidth - 1){
+      container.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
   });
 
   btnLeft.addEventListener("click", () => {
-    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    if(container.scrollLeft <= 0){
+      container.scrollTo({ left: container.scrollWidth, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
   });
 });
+
 
 
 /*=============== HOME SWIPER ===============*/
