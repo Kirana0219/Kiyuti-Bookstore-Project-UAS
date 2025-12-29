@@ -100,7 +100,7 @@ function updateTitle(category) {
     card.addEventListener("click", () => {
 
       modalTitle.textContent = card.querySelector(".book-title").textContent;
-      modalAuthor.textContent = "Penulis: " + card.querySelector(".book-author").textContent;
+      modalAuthor.textContent = card.querySelector(".book-author").textContent;
       modalDesc.textContent = card.querySelector(".book-desc").textContent;
       modalPrice.textContent = "Harga: " + card.querySelector(".book-price").textContent;
 
