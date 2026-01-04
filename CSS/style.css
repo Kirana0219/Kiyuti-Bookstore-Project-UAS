@@ -953,12 +953,13 @@ button:hover {
 /*=============== FOOTER ===============*/
 .footer {
   width: 100%;
-  padding: 24px 12px 0;
+  padding: 24px 20px 0;
   background-color: var(--container-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--text-color);
-
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -1041,7 +1042,7 @@ button:hover {
   color: var(--first-color);
   opacity: 0.75;
 
- border-top: 0.5px solid rgba(0, 0, 0, 0.12);
+ border-top: 0.5px solid var(--border-color);
 }
 
 .footer-navigasi-title {
