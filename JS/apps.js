@@ -206,6 +206,14 @@ let swiperHome = new Swiper('.home-swiper', {
   }
 });
 
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const shadowHeader = () =>{
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 of the viewport
+    this.scrollY >= 50 ? header.classList.add('shadow-header') : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll', shadowHeader)
+
 /*=============== DROPDOWN KATEGORI MENU ===============*/
 const categoryButton = document.getElementById("category-button");
 const categoryMenu = document.getElementById("categoryFilter");
