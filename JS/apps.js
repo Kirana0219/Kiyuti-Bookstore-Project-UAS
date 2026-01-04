@@ -205,3 +205,36 @@ let swiperHome = new Swiper('.home-swiper', {
     }
   }
 });
+
+/*=============== DROPDOWN KATEGORI MENU ===============*/
+const categoryButton = document.getElementById("category-button");
+const categoryMenu = document.getElementById("categoryFilter");
+const categoryToggle = document.getElementById("dropdown-toggle");
+
+categoryButton.addEventListener("click", (e) => {
+  categoryMenu.classList.toggle("open");
+});
+
+// Tutup menu saat klik di luar
+document.addEventListener("click", (e) => {
+  if (!categoryToggle.contains(e.target)) {
+    categoryMenu.classList.remove("open");
+  }
+});
+
+/*=============== DROPDOWN HAMBURGER MENU ===============*/
+const hamburgerButton = document.getElementById("hamburger-button");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+const hamburgerToggle = document.getElementById("hamburger-toggle");
+
+hamburgerButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  hamburgerMenu.classList.toggle("open");
+});
+
+// Tutup menu saat klik di luar
+document.addEventListener("click", (e) => {
+  if (!hamburgerToggle.contains(e.target)) {
+    hamburgerMenu.classList.remove("open");
+  }
+});
