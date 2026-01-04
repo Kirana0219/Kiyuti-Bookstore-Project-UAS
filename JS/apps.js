@@ -357,3 +357,5 @@ document.addEventListener("click", (e) => {
     hamburgerMenu.classList.remove("open");
   }
 });
+
+//comments 
