@@ -245,7 +245,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 /*=============== SLIDER BOOKS ===============*/
 document.querySelectorAll(".book-container").forEach(container => {
   const slider = container.previousElementSibling;
