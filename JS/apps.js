@@ -197,6 +197,13 @@ document.addEventListener("DOMContentLoaded", function () {
             "Shinchan 14",
             "Tantangan Mama",
         ],
+        "lainnya": [
+            "Kiri Sampai Sini",
+            "Kisah di Ujung Pena ",
+            "Kumpulan Puisi Jantung yang Berdetak dalam Batu",
+            "Puisi Bahana dalam Diam Ada Dian",
+            "Senja Jingga di Bentala Timah Jejak Sastra di Tanah Melayu",
+        ],
     };
 
     const categorySelect = document.getElementById("dropdown-category");
