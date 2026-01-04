@@ -938,7 +938,6 @@ button:hover {
   overflow-y: auto;
 }
 
-
 .search-product li{
   padding: 8px 12px;
   cursor: pointer;
@@ -950,10 +949,134 @@ button:hover {
   background-color: var(--border-color);
 }
 
-
 /*=============== FOOTER ===============*/
+/*=============== FOOTER ===============*/
+.footer {
+  width: 100%;
+  padding: 24px 12px 0;
+  background-color: var(--container-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+}
 
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-icon {
+  color: var(--first-color);
+  font-size: 1.5rem;
+}
+
+.footer-name {
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  margin-left: 6px;
+  font-size: var(--h3-font-size);
+}
+
+.footer-description {
+  margin: 16px 0;
+}
+
+/* Sosmed */
+#footer-links {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#footer-links a {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  color: var(--first-color); 
+}
+
+#footer-links a:hover {
+  color:#7f28a1;
+}
+
+#footer-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 12px 0;
+  border-radius: 50%;
+  background-color: var(--body-color);
+  box-shadow: 0 2px 12px rgba(0,0,0,.1);
+}
+
+#footer-links li a:hover {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+
+.footer-copy {
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: var(--body-font);
+  color: var(--first-color);
+  opacity: 0.75;
+
+ border-top: 0.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.footer-navigasi-title {
+  color: var(--first-color);
+  font-weight: var(--font-regular);
+}
+
+.footer-navigasi-links li a{
+  color: var(--text-color);
+  margin: 8px 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.footer-navigasi-links li a:hover {
+  color: var(--first-color);
+}
+
+.contact-info-title{
+  color: var(--first-color);
+  font-weight: var(--font-regular);
+}
+
+.info-footer li{
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  color: var(--text-color);
+}
+
+.info-footer li i{
+  font-size: 1.1rem;
+  margin-right: 8px;
+  color: var(--first-color);
+}
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;

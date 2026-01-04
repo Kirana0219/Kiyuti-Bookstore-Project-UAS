@@ -312,8 +312,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   });
 });
 
-
-
 /*=============== HOME SWIPER ===============*/
 let swiperHome = new Swiper('.home-swiper', {
   loop: true,
