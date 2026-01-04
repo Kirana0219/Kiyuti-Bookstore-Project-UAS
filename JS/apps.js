@@ -2,16 +2,16 @@
 const searchWrapper = document.getElementById("search-wrapper");
 const searchButton = document.getElementById("search-button");
 const searchInput = searchWrapper.querySelector(".search-input");
-const logoText = document.querySelector(".logo-text");
+const header = document.getElementById("header");
 
 searchButton.addEventListener("click", () => {
   searchWrapper.classList.toggle("active");
 
   if (searchWrapper.classList.contains("active")) {
     searchInput.focus();
-    logoText.classList.add("hidden"); //sembunyikann teks
+    header.classList.add("search-active");
   } else {
-    logoText.classList.remove("hidden"); // tampilkan lagi
+    header.classList.remove("search-active");
   }
 });
 
