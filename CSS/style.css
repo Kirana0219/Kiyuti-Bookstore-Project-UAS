@@ -1120,14 +1120,40 @@ button:hover {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .nav {
+    margin: 0 1rem;
+  }
 
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .search-wrapper.active {
+    width: 100%;
+  }
+
+  .search-active .nav-logo {
+    display: none;
+  }
+}
+
+/* For medium devices */
 @media screen and (max-width: 768px) {
   .nav {
     margin: 0 1.5rem;
   }
 
-  .hide-mobile, .ri-user-line {
-    display: none !important;
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .search-wrapper.active {
+    width: 100%;
+  }
+
+  .search-active .nav-logo {
+    display: none;
   }
 
   .dropdown-menu  {
@@ -1156,9 +1182,6 @@ button:hover {
     margin: 0;
   }
 }
-
-/* For medium devices */
-
 
 /* For large devices */
 @media screen and (min-width: 1150px) {
