@@ -89,9 +89,26 @@
                   <a href="#" class="nav-hamburger hide" id="hamburger-button">
                      <i class="ri-menu-line"></i>
                   </a>
+                  
                   <ul class="dropdown-menu" id="hamburgerMenu">
                      <li><a href="#home">Beranda</a></li>
-                     <li><a href="#new">Kategori</a></li>
+                     
+                     <li class="hamburger-submenu">
+                        <a href="#new" class="hamburger-submenu-toggle">
+                           <span>Kategori</span>
+                           <i class="ri-arrow-down-s-line arrow"></i>
+                        </a>
+                        <ul class="hamburger-submenu-menu">
+                        <li><a href="#new" data-value="all">Semua</a></li>
+                        <li><a href="#new" data-value="romantis">Romantis</a></li>
+                        <li><a href="#new" data-value="fantasi">Fantasi</a></li>
+                        <li><a href="#new" data-value="horor">Horor</a></li>
+                        <li><a href="#new" data-value="komedi">Komedi</a></li>
+                        <li><a href="#new" data-value="pengembangan-diri">Pengembangan Diri</a></li>
+                        <li><a href="#new" data-value="komik">Komik</a></li>
+                        </ul>
+                     </li>
+
                      <li><a href="#new-arrival">Buku Terbaru</a></li>
                      <li><a href="#recomendation">Rekomendasi</a></li>
                      <li><a href="#testimonial">Testimoni</a></li>
@@ -1633,8 +1650,62 @@
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
-         
+      <div class="footer-container">
+
+         <div class="footer-content">
+            <a href="#" id="footer-logo">
+            <i class="ri-git-repository-line logo-icon"></i>
+            <span class="footer-name">Kiyuti Bookstore</span>
+            </a>
+
+            <p class="footer-description">
+            Temukan bacaan favorit Anda dan tumbuhkan <br>
+            semangat literasi bersama kami!
+            </p>
+
+            <ul id="footer-links">
+            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+            <li><a href="#"><i class="ri-twitter-x-line"></i></a></li>
+            <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+            </ul>
+         </div>
+
+         <div class="footer-navigasi">
+            <h3 class="footer-navigasi-title">Navigasi</h3>
+            <ul class="footer-navigasi-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#new-arrival">Buku Terbaru</a></li>
+            <li><a href="#recomendation">Rekomendasi</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#buy">Pemesanan</a></li>
+            </ul>
+      </div>
+
+      <div class="contact-info-footer">
+         <h3 class="contact-info-title">Kontak Kami</h3>
+         <ul class="info-footer">
+            <li>
+               <i class="ri-map-pin-2-fill info-icon"></i>
+               <span>Jl.Padma No.45, Denpasar, Indonesia</span>
+            </li>
+            <li>
+               <i class="ri-mail-fill info-icon"></i>
+               <span>kiyuti.bookstore@gmail.com</span>
+            </li>
+            <li>
+               <i class="ri-phone-fill info-icon"></i>
+               <span>+62-812-3456-7890 (Kirayuki)</span>
+            </li>
+         </ul>
+      </div>
+
+      <p class="footer-copy">
+         &#169; 2024 Kiyuti Bookstore. All rights reserved.
+      </p>
       </footer>
+
 
       <!--========== SCROLL UP ==========-->
       
