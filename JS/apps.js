@@ -109,7 +109,7 @@ document.addEventListener("click", () => {
   }
 });
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll')
@@ -181,7 +181,6 @@ function updateTitle(category) {
   title.textContent = titles[category] || "Daftar Buku";
 }
 
-
   /* ================= MODAL BUKU  ================= */
 const modal = document.getElementById("bookModal");
 const modalTitle = document.getElementById("modalTitle");
@@ -206,17 +205,17 @@ document.addEventListener("click", function (e) {
   modal.style.display = "flex";
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
-});
+  modal.addEventListener("click", e => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 
-document.querySelectorAll(".slide-btn").forEach(btn => {
-  btn.addEventListener("click", e => e.stopPropagation());
-});
+  document.querySelectorAll(".slide-btn").forEach(btn => {
+    btn.addEventListener("click", e => e.stopPropagation());
+  });
 });
 
 let qty = 1;
@@ -247,12 +246,12 @@ document.querySelectorAll(".book-card").forEach(card => {
     modalDesc.textContent = card.querySelector(".book-desc").textContent;
     modalPrice.textContent = card.querySelector(".book-price").textContent;
 
-    modalImg.src = card.dataset.img;
-
-    currentStock = parseInt(card.dataset.stock); modalStock.textContent = isNaN(currentStock) ? "10" : currentStock;
-
+    // Ambil gambar langsung dari <img>
     modalImg.src = card.querySelector("img").src;
 
+    // Ambil stok
+    currentStock = parseInt(card.dataset.stock) || 10;
+    modalStock.textContent = currentStock;
 
     modal.style.display = "flex";
   });
@@ -318,11 +317,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let products = [];
 
-        // Jika kategori dipilih, filter berdasarkan kategori
         if (category && productData[category]){
             products = productData[category];
         } else {
-            // Jika tidak pilih kategori, ambil semua produk
             products = Object.values(productData).flat();
         }
 
@@ -345,8 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("click", function (e) {
         if (!searchProduct.parentElement.contains(e.target)) {
-            resultList.innerHTML = "";
-        }
+            resultList.innerHTML = "";}
     });
 });
 
@@ -455,7 +451,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   btnRight.addEventListener("click", e => {
     e.stopPropagation();
 
-    // kalau sudah mentok kanan
     if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
       container.scrollTo({ left: 0, behavior: "smooth" });
     } else {
@@ -466,7 +461,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   btnLeft.addEventListener("click", e => {
     e.stopPropagation();
 
-    // kalau sudah mentok kiri
     if (container.scrollLeft <= 0) {
       container.scrollTo({
         left: container.scrollWidth,

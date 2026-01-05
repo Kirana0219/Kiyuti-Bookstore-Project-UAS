@@ -773,7 +773,7 @@ img {
   font-weight: bolder;
   border-radius: 50%;
   border: 2px solid var(--first-color);
-  background-color: var(--white-color);
+  background-color: transparent;
   color: var(--first-color);
   cursor: pointer;
   transition: all 0.3s ease;
