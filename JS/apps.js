@@ -109,7 +109,7 @@ document.addEventListener("click", () => {
   }
 });
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll')
@@ -181,7 +181,6 @@ function updateTitle(category) {
   title.textContent = titles[category] || "Daftar Buku";
 }
 
-
   /* ================= MODAL BUKU  ================= */
 const modal = document.getElementById("bookModal");
 const modalTitle = document.getElementById("modalTitle");
@@ -206,17 +205,17 @@ document.addEventListener("click", function (e) {
   modal.style.display = "flex";
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
-});
+  modal.addEventListener("click", e => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 
-document.querySelectorAll(".slide-btn").forEach(btn => {
-  btn.addEventListener("click", e => e.stopPropagation());
-});
+  document.querySelectorAll(".slide-btn").forEach(btn => {
+    btn.addEventListener("click", e => e.stopPropagation());
+  });
 });
 
 let qty = 1;
@@ -250,14 +249,13 @@ document.querySelectorAll(".book-card").forEach(card => {
     // Ambil gambar langsung dari <img>
     modalImg.src = card.querySelector("img").src;
 
-    // Ambil stok, default 10 kalau kosong
+    // Ambil stok
     currentStock = parseInt(card.dataset.stock) || 10;
     modalStock.textContent = currentStock;
 
     modal.style.display = "flex";
   });
 });
-
 
 // Kontrol kuantitas
 plusBtn.addEventListener("click", () => {
