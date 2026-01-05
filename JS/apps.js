@@ -350,6 +350,79 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/*=============== ALERT ===============*/
+  const form = document.getElementById('orderForm'); 
+  const submitBtn = document.getElementById('submitBtn');
+  const confirmOverlay = document.getElementById('customAlertOverlay');
+  const confirmBtn = document.getElementById('confirm-btn');
+  const cancelBtn = document.getElementById('cancel-btn');
+  const successOverlay = document.getElementById('successAlertOverlay');
+  const okBtn = document.getElementById('ok-btn');
+
+
+  function showConfirmAlert() {
+      confirmOverlay.style.display = 'flex'; 
+  }
+  function hideConfirmAlert() {
+      confirmOverlay.style.display = 'none';
+  }
+  function showSuccessAlert() {
+      successOverlay.style.display = 'flex';
+  }
+  function hideSuccessAlert() {
+      successOverlay.style.display = 'none';
+  }
+
+
+  form.addEventListener('submit', function(e) {
+      // 1. CEK VALIDASI FORMULIR
+      if (!form.checkValidity()) {
+          return; 
+      }
+  
+      e.preventDefault(); 
+      
+      showConfirmAlert();
+  });
+
+
+  // Konfirmasi dan Sukses 
+
+  // Tombol Batal
+  cancelBtn.addEventListener('click', function() {
+      hideConfirmAlert();
+      console.log('Pengiriman dibatalkan.');
+  });
+
+  // Tombol Kirim (Konfirmasi)
+  confirmBtn.addEventListener('click', function() {
+      hideConfirmAlert();
+      
+      console.log('Data sedang dikirim ke server...');
+    
+      showSuccessAlert(); 
+  });
+
+  // Tombol OK 
+  okBtn.addEventListener('click', function() {
+      hideSuccessAlert();
+      console.log('Proses selesai. Formulir akan direset.');
+      
+      form.reset(); 
+  });
+
+  confirmOverlay.addEventListener('click', function(e) {
+      if (e.target === confirmOverlay) {
+          hideConfirmAlert();
+      }
+  });
+
+  successOverlay.addEventListener('click', function(e) {
+      if (e.target === successOverlay) {
+          hideSuccessAlert();
+      }
+  });
+
 /*=============== SLIDER BOOKS ===============*/
 document.querySelectorAll(".book-container").forEach(container => {
   const slider = container.previousElementSibling;

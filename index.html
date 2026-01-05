@@ -1643,8 +1643,32 @@
                   <textarea name="note" id="note" rows="4" placeholder="Tulis catatan anda disini...."></textarea>
                </div>
 
-               <button type="submit">Kirim Sekarang</button>
-            </form>
+                  <button type="submit" id="submitBtn">Kirim Sekarang</button>
+               </form>
+
+               <!-- ALERT -->
+               <div id="customAlertOverlay" class="custom-alert-overlay">
+                  <div class="custom-alert-box">
+                        <div class="alert-icon">?</div> 
+                        <div class="alert-title">Konfirmasi</div>
+                        <div class="alert-text">Apakah Anda yakin ingin mengirim data ini?</div>
+                        <div class="alert-actions">
+                           <button id="cancel-btn" class="cancel-button">Batal</button>
+                           <button id="confirm-btn" class="confirm-button">Kirim</button>
+                        </div>
+                  </div>
+               </div>
+
+               <div id="successAlertOverlay" class="custom-alert-overlay">
+                     <div class="custom-alert-box">
+                           <div class="alert-icon success-icon">✓</div> 
+                           <div class="alert-title">Berhasil</div>
+                           <div class="alert-text">Data berhasil dikirim.</div>
+                           <div class="alert-actions">
+                              <button id="ok-btn" class="confirm-button">OK</button>
+                           </div>
+                     </div>
+                  </div>
          </section>
 
       <!--==================== FOOTER ====================-->
@@ -1709,7 +1733,7 @@
       <!--========== SCROLL UP ==========-->
       
 
-      <!--=============== SCROLLREVEAL ===============-->
+      <!--=============== SWIPER ===============-->
       <script src="JS/swiper-bundle.min.js"></script>
 
       <!--=============== JS ===============-->
