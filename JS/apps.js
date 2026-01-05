@@ -244,8 +244,8 @@ document.querySelectorAll(".book-card").forEach(card => {
     modalPrice.textContent = card.querySelector(".book-price").textContent;
 
     modalImg.src = card.dataset.img;
-    currentStock = parseInt(card.dataset.stock);
-    modalStock.textContent = currentStock;
+
+    currentStock = parseInt(card.dataset.stock); modalStock.textContent = isNaN(currentStock) ? "10" : currentStock;
 
     modalImg.src = card.querySelector("img").src;
 
