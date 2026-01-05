@@ -165,7 +165,7 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden;
 }
 
 /*=============== HEADER & NAV ===============*/
