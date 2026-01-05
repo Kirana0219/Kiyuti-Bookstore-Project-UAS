@@ -71,8 +71,12 @@
         "lainnya": [
             "Kiri Sampai Sini",
             "Kisah di Ujung Pena ",
+            "Tidak Apa-Aoa, Menyerah Saja ",
+            "Ikhlas",
+            "Setan-Setan Menggugat",
             "Kumpulan Puisi Jantung yang Berdetak dalam Batu",
             "Puisi Bahana dalam Diam Ada Dian",
+            "Bahana Dalam Diam Ada Dian",
             "Senja Jingga di Bentala Timah Jejak Sastra di Tanah Melayu",
         ],
     };
