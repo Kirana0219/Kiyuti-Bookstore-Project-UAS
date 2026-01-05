@@ -1003,7 +1003,7 @@ button:hover {
 /*=============== FOOTER ===============*/
 .footer {
   width: 100%;
-  padding: 24px 20px 0;
+  padding: 30px 30px 0;
   background-color: var(--container-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -1128,6 +1128,7 @@ button:hover {
   margin-right: 8px;
   color: var(--first-color);
 }
+
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
