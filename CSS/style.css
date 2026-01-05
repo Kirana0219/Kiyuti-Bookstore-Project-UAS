@@ -736,13 +736,19 @@ img {
 .modal-rating {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin-bottom: 0.75rem;
 }
 
 .modal-rating i {
   color: #FFD700;
   font-size: 1rem;
+}
+
+.modal-rating span {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  font-family: var(--body-font);
 }
 
 .modal-sku, .modal-tags {
