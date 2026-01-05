@@ -247,16 +247,15 @@ document.querySelectorAll(".book-card").forEach(card => {
     modalDesc.textContent = card.querySelector(".book-desc").textContent;
     modalPrice.textContent = card.querySelector(".book-price").textContent;
 
-    modalImg.src = card.dataset.img;
-
-    currentStock = parseInt(card.dataset.stock); modalStock.textContent = isNaN(currentStock) ? "10" : currentStock;
-
     modalImg.src = card.querySelector("img").src;
 
+    currentStock = parseInt(card.dataset.stock) || 10;
+    modalStock.textContent = currentStock;
 
     modal.style.display = "flex";
   });
 });
+
 
 // Kontrol kuantitas
 plusBtn.addEventListener("click", () => {
