@@ -94,6 +94,17 @@ searchButton.addEventListener("click", () => {
   }
 });
 
+searchWrapper.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  if (searchWrapper.classList.contains("active")) {
+    searchWrapper.classList.remove("active");
+    header.classList.remove("search-active");
+  }
+});
+
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')

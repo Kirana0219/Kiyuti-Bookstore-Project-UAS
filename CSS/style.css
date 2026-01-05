@@ -170,7 +170,7 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -330,24 +330,26 @@ img {
 
 /* Show search */
 .search-wrapper.active {
-  width: 240px;
+  width: auto;
+  left: 1rem;
+  right: 3.5rem;
   background-color: #f0f0f0;
   border-radius: 25px;
   padding: 5px 10px;
 }
 
 .search-wrapper.active .search-input {
-  width: 100%;
+  width: auto;
   padding: 5px 10px;
 }
 
-.logo-text {
+/* .logo-text {
   opacity: 1;
   max-width: 200px;
   overflow: hidden;
   white-space: nowrap;
   transition: opacity 0.25s ease, max-width 0.25s ease;
-}
+} */
 
 .logo-text.hidden {
   opacity: 0;
@@ -369,6 +371,7 @@ img {
 
 .home-container {
   padding: 16px 0 32px;
+  overflow: hidden;
 }
 
 .home-data {
@@ -1122,7 +1125,7 @@ button:hover {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (min-width: 320px) and (max-width: 374px) {
+@media screen and (max-width: 374px) {
   .nav {
     margin: 0 1rem;
   }
@@ -1132,15 +1135,35 @@ button:hover {
   }
 
   .search-wrapper.active {
-    width: 100%;
+    min-width: 215px;
   }
 
   .search-active .nav-logo {
-    display: none;
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .search-wrapper.active {
+    max-width: 260px;
+  }
+  
+  .search-active .nav-logo {
+    display: none !important;
   }
 }
 
 /* For medium devices */
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .search-wrapper.active {
+    max-width: 300px;
+  }
+
+  .search-active .nav-logo {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .nav {
     margin: 0 1.5rem;
@@ -1149,13 +1172,13 @@ button:hover {
   .nav-actions {
     gap: 0.5rem;
   }
-
+  
   .search-wrapper.active {
-    width: 100%;
+    max-width: 300px;
   }
 
   .search-active .nav-logo {
-    display: none;
+    display: inline-flex;
   }
 
   .dropdown-menu  {
@@ -1248,5 +1271,9 @@ button:hover {
 
   .home-article, .home-img {
     width: 290px;
+  }
+
+  .search-active .nav-menu {
+    display: none;
   }
 }
