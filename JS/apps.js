@@ -125,6 +125,83 @@ document.querySelectorAll(".slide-btn").forEach(btn => {
 });
 });
 
+let qty = 1;
+let currentStock = 0;
+
+const modal = document.getElementById("bookModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalAuthor = document.getElementById("modalAuthor");
+const modalDesc = document.getElementById("modalDesc");
+const modalPrice = document.getElementById("modalPrice");
+const modalImg = document.getElementById("modalImg");
+const modalStock = document.getElementById("modalStock");
+
+const qtyValue = document.getElementById("qtyValue");
+const minusBtn = document.getElementById("minusQty");
+const plusBtn = document.getElementById("plusQty");
+const addToCartBtn = document.getElementById("addToCartBtn");
+const buyNowBtn = document.getElementById("buyNowBtn");
+
+// Buka modal saat klik card
+document.querySelectorAll(".book-card").forEach(card => {
+  card.addEventListener("click", () => {
+    qty = 1;
+    qtyValue.textContent = qty;
+
+    modalTitle.textContent = card.querySelector(".book-title").textContent;
+    modalAuthor.textContent = card.querySelector(".book-author").textContent;
+    modalDesc.textContent = card.querySelector(".book-desc").textContent;
+    modalPrice.textContent = card.querySelector(".book-price").textContent;
+
+    modalImg.src = card.dataset.img;
+    currentStock = parseInt(card.dataset.stock);
+    modalStock.textContent = currentStock;
+
+    modalImg.src = card.querySelector("img").src;
+
+
+    modal.style.display = "flex";
+  });
+});
+
+// Kontrol kuantitas
+plusBtn.addEventListener("click", () => {
+  if (qty < currentStock) {
+    qty++;
+    qtyValue.textContent = qty;
+  }
+});
+
+minusBtn.addEventListener("click", () => {
+  if (qty > 1) {
+    qty--;
+    qtyValue.textContent = qty;
+  }
+});
+
+// Tambah ke keranjang
+addToCartBtn.addEventListener("click", () => {
+  if (currentStock === 0) {
+    alert("Stok habis!");
+    return;
+  }
+  currentStock -= qty;
+  modalStock.textContent = currentStock;
+  alert(`Berhasil ditambahkan ke keranjang (${qty} buku)`);
+  qty = 1;
+  qtyValue.textContent = qty;
+});
+
+// Beli sekarang
+buyNowBtn.addEventListener("click", () => {
+  if (currentStock === 0) {
+    alert("Stok habis!");
+    return;
+  }
+  alert(`Checkout langsung ${qty} buku`);
+});
+
+
 /*=============== CONTACT AND BUY ===============*/
 document.addEventListener("DOMContentLoaded", function () {
 

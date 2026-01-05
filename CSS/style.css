@@ -601,6 +601,156 @@ img {
   transform: scale(1.2);
 }
 
+/* tambahan untuk keranjangnya */
+/* ===== MODAL ACTION ===== */
+.modal-actions {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.modal-stock {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.modal-stock span {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.modal-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-qty label {
+  font-size: var(--small-font-size);
+}
+
+.modal-qty input {
+  width: 70px;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* tambah ke keranjang */
+.btn-cart {
+  background-color: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+}
+
+.btn-cart:hover,
+.btn-cart:active {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+
+/* beli sekarang */
+.btn-buy {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border: none;
+}
+
+.btn-buy:hover,
+.btn-buy:active {
+  background-color: var(--first-color-dark, #a85ccf);
+  color: var(--white-color);
+}
+
+
+/* rating */
+.modal-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-rating i {
+  color: #FFD700;
+  font-size: 1rem;
+}
+
+.modal-sku, .modal-tags {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+/* tombol +- */
+.qty-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.qty-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 50%;
+  border: 2px solid var(--first-color);
+  background-color: var(--white-color);
+  color: var(--first-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.qty-btn:hover {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+#qtyValue {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--title-color);
+  min-width: 32px;
+  text-align: center;
+}
+
+
+.book-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 /*=============== NEW ARRIVAL ===============*/
 .container-new-arrival{
   margin: 0 96px;
