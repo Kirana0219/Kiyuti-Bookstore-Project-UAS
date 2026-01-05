@@ -317,11 +317,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let products = [];
 
-        // Jika kategori dipilih, filter berdasarkan kategori
         if (category && productData[category]){
             products = productData[category];
         } else {
-            // Jika tidak pilih kategori, ambil semua produk
             products = Object.values(productData).flat();
         }
 
@@ -344,8 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("click", function (e) {
         if (!searchProduct.parentElement.contains(e.target)) {
-            resultList.innerHTML = "";
-        }
+            resultList.innerHTML = "";}
     });
 });
 
@@ -381,7 +378,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   btnRight.addEventListener("click", e => {
     e.stopPropagation();
 
-    // kalau sudah mentok kanan
     if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
       container.scrollTo({ left: 0, behavior: "smooth" });
     } else {
@@ -392,7 +388,6 @@ document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
   btnLeft.addEventListener("click", e => {
     e.stopPropagation();
 
-    // kalau sudah mentok kiri
     if (container.scrollLeft <= 0) {
       container.scrollTo({
         left: container.scrollWidth,
