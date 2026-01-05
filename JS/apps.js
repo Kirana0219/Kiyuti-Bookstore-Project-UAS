@@ -383,3 +383,23 @@ document.addEventListener("click", (e) => {
     hamburgerMenu.classList.remove("open");
   }
 });
+
+document.querySelectorAll(".hamburger-submenu-toggle").forEach(toggle => {
+  toggle.addEventListener("click", e => {
+    e.preventDefault();
+
+    const parent = toggle.closest(".hamburger-submenu");
+    const arrow = toggle.querySelector(".arrow");
+
+    if (!arrow) return;
+
+    parent.classList.toggle("open");
+
+    if (parent.classList.contains("open")) {
+      arrow.className = "ri-arrow-up-s-line arrow";
+    } else {
+      arrow.className = "ri-arrow-down-s-line arrow";
+    }
+  });
+});
+
