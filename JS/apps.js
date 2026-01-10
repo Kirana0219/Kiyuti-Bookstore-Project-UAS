@@ -140,47 +140,74 @@ themeButton.addEventListener('click', () => {
 })
 document.addEventListener("DOMContentLoaded", () => {
 
-/* ================= FILTER KATEGORI ================= */
-const categoryFilter = document.getElementById("categoryFilter");
-const bookCards = document.querySelectorAll("#new .book-card");
-const title = document.getElementById("bookTitle");
+ /* ================== FILTER KATEGORI (DESKTOP & MOBILE) ================== */
+  const titleEl = document.getElementById("bookTitle");
+  const bookCards = document.querySelectorAll("#new .book-card");
+  const desktopCategoryMenu = document.getElementById("categoryFilter");
+  const mobileCategoryMenu = document.querySelector(".hamburger-submenu-menu");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+  const hamburgerButton = document.getElementById("hamburger-button");
 
-categoryFilter.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (e.target.tagName !== "A") return;
-
-  const selectedCategory = e.target.dataset.value;
-
-  // filter buku
-  bookCards.forEach(card => {
-    const cardCategory = card.dataset.category;
-
-    if (selectedCategory === "all" || cardCategory === selectedCategory) {
-      card.style.display = "flex";
-    } else {
-      card.style.display = "none";
-    }
-  });
-
-  // update judul
-  updateTitle(selectedCategory);
-});
-
-function updateTitle(category) {
-  const titles = {
+  const TITLES = {
     all: "Daftar Buku",
     romantis: "Buku Romantis",
     fantasi: "Buku Fantasi",
     horor: "Buku Horor",
     komedi: "Buku Komedi",
     "pengembangan-diri": "Buku Pengembangan Diri",
-    komik: "Buku Komik"
+    komik: "Buku Komik",
   };
 
-  title.textContent = titles[category] || "Daftar Buku";
-}
+  function updateTitle(category) {
+    titleEl.textContent = TITLES[category] || "Daftar Buku";
+  }
 
+  function applyFilter(category) {
+    bookCards.forEach((card) => {
+      const cardCategory = card.dataset.category;
+      const isShow = category === "all" || cardCategory === category;
+      card.style.display = isShow ? "flex" : "none";
+    });
+    updateTitle(category);
+  }
+
+  function closeHamburgerIfOpen() {
+    if (hamburgerMenu && hamburgerMenu.classList.contains("show")) {
+      hamburgerMenu.classList.remove("show");
+    }
+    if (hamburgerMenu && hamburgerMenu.classList.contains("open")) {
+      hamburgerMenu.classList.remove("open");
+    }
+    if (hamburgerButton && hamburgerButton.getAttribute("aria-expanded") === "true") {
+      hamburgerButton.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  function onCategoryClick(e) {
+    const a = e.target.closest("a");
+    if (!a) return;
+    const value = a.dataset.value;
+    if (!value) return;
+    e.preventDefault();
+    e.stopPropagation();
+
+    applyFilter(value);
+
+    if (hamburgerMenu && hamburgerMenu.contains(a)) {
+      closeHamburgerIfOpen();
+    }
+    const target = document.getElementById("new");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  if (desktopCategoryMenu) {
+    desktopCategoryMenu.addEventListener("click", onCategoryClick, { passive: false });
+  }
+  if (mobileCategoryMenu) {
+    mobileCategoryMenu.addEventListener("click", onCategoryClick, { passive: false });
+  }
 
   /* ================= MODAL BUKU  ================= */
 const modal = document.getElementById("bookModal");
