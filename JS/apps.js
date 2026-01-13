@@ -138,8 +138,8 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-document.addEventListener("DOMContentLoaded", () => {
 
+document.addEventListener("DOMContentLoaded", () => {
  /* ================== FILTER KATEGORI (DESKTOP & MOBILE) ================== */
   const titleEl = document.getElementById("bookTitle");
   const bookCards = document.querySelectorAll("#new .book-card");
@@ -210,40 +210,40 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ================= MODAL BUKU  ================= */
-const modal = document.getElementById("bookModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalAuthor = document.getElementById("modalAuthor");
-const modalDesc = document.getElementById("modalDesc");
-const modalPrice = document.getElementById("modalPrice");
-const closeBtn = document.querySelector(".close-btn");
+  const modal = document.getElementById("bookModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalAuthor = document.getElementById("modalAuthor");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalPrice = document.getElementById("modalPrice");
+  const closeBtn = document.querySelector(".close-btn");
 
-document.addEventListener("click", function (e) {
-  const card = e.target.closest(".book-card");
-  if (!card) return;
+  document.addEventListener("click", function (e) {
+    const card = e.target.closest(".book-card");
+    if (!card) return;
 
-  modalTitle.textContent =
-    card.querySelector(".book-title")?.textContent || "";
-  modalAuthor.textContent =
-    card.querySelector(".book-author")?.textContent || "";
-  modalDesc.textContent =
-    card.querySelector(".book-desc")?.textContent || "";
-  modalPrice.textContent =
-    card.querySelector(".book-price")?.textContent || "";
+    modalTitle.textContent =
+      card.querySelector(".book-title")?.textContent || "";
+    modalAuthor.textContent =
+      card.querySelector(".book-author")?.textContent || "";
+    modalDesc.textContent =
+      card.querySelector(".book-desc")?.textContent || "";
+    modalPrice.textContent =
+      card.querySelector(".book-price")?.textContent || "";
 
-  modal.style.display = "flex";
-});
+    modal.style.display = "flex";
+  });
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
-});
+  modal.addEventListener("click", e => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 
-document.querySelectorAll(".slide-btn").forEach(btn => {
-  btn.addEventListener("click", e => e.stopPropagation());
-});
+  document.querySelectorAll(".slide-btn").forEach(btn => {
+    btn.addEventListener("click", e => e.stopPropagation());
+  });
 });
 
 let qty = 1;
