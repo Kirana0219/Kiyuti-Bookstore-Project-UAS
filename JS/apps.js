@@ -528,7 +528,6 @@ let swiperHome = new Swiper('.home-swiper', {
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const shadowHeader = () =>{
     const header = document.getElementById('header')
-    // Add a class if the bottom offset is greater than 50 of the viewport
     this.scrollY >= 50 ? header.classList.add('shadow-header') : header.classList.remove('shadow-header')
 }
 window.addEventListener('scroll', shadowHeader)
@@ -542,7 +541,6 @@ categoryButton.addEventListener("click", (e) => {
   categoryMenu.classList.toggle("open");
 });
 
-// Tutup menu saat klik di luar
 document.addEventListener("click", (e) => {
   if (!categoryToggle.contains(e.target)) {
     categoryMenu.classList.remove("open");
@@ -559,7 +557,6 @@ hamburgerButton.addEventListener("click", (e) => {
   hamburgerMenu.classList.toggle("open");
 });
 
-// Tutup menu saat klik di luar
 document.addEventListener("click", (e) => {
   if (!hamburgerToggle.contains(e.target)) {
     hamburgerMenu.classList.remove("open");
